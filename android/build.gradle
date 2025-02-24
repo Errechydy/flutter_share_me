@@ -4,7 +4,8 @@ version '1.0-SNAPSHOT'
 buildscript {
     repositories {
         google()
-        jcenter()
+        // jcenter()
+        gradlePluginPortal()
         mavenCentral()
     }
 
@@ -16,17 +17,20 @@ buildscript {
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        // jcenter()
+        gradlePluginPortal()
+        mavenCentral()
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    namespace 'com.example.flutter_share_me'
+    compileSdkVersion 33
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
